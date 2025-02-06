@@ -1,0 +1,56 @@
+{% load django_vite %}
+
+<header class="flex items-center justify-between bg-navbar h-20 px-8 text-text_navbar sticky top-0 z-40 border-b border-text_navbar">
+    <div>
+        <a class="flex items-center gap-2" href="/">
+            <img class="h-10" src="{% vite_asset_url 'public/images/logo.png' %}" alt="Logo"/>
+            <span class="text-lg font-bold">Django starter</span>
+        </a>
+    </div>
+    <nav class="block relative">
+        <ul class="navitems flex items-center justify-center h-full">
+            {% if request.user.is_authenticated %}
+            <!-- HOME START -->
+            <li><a href="/">Home</a></li>
+            <!-- HOME END -->
+            
+            <!-- PROFILE START -->
+            <li x-data="{ dropdownOpen: false }" class="relative">
+                <!-- FLECHE PROFILE START -->
+                <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false" class="cursor-pointer select-none">
+                    <img class="h-8 w-8 rounded-full object-cover" src="{{ request.user.profile.avatar }}" alt="Avatar" />
+                    {{ request.user.profile.name }}
+                    <img x-bind:class="dropdownOpen ? 'rotate-180' : 'rotate-0 transition-transform duration-200 ease-in-out'" 
+                    class="w-4" src="https://img.icons8.com/small/32/text_navbar/expand-arrow.png" alt="Dropdown"/>
+                </a>
+                <!-- FLECHE PROFILE END -->
+                
+                <!-- LISTE PROFILE START -->
+                <div x-show="dropdownOpen" x-cloak class="absolute right-0 bg-navbar text-text_navbar shadow rounded-lg w-40 p-2 z-20"
+                x-transition:enter="duration-200 ease-out"
+                x-transition:enter-start="opacity-0 -translate-y-5 scale-90"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="duration-100 ease-in"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 -translate-y-5 scale-90">
+                
+                    <ul class="hoverlist [&>li>a]:justify-end">
+                        <li><a href="{% url 'users:profile' %}">My Profile</a></li>
+                        <li><a href="{% url 'users:profile-edit' %}">Edit Profile</a></li>
+                        <li><a href="{% url 'users:profile-settings' %}">Settings</a></li>
+                        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+                    </ul>
+                </div>
+                <!-- LISTE PROFILE END -->
+            </li>
+            <!-- PROFILE END -->
+            
+            {% else %}
+            <!-- LOGIN START -->
+            <li><a href="{% url 'account_login' %}">Login</a></li>
+            <li><a href="{% url 'account_signup' %}?next={% url 'users:profile-onboarding' %}">Signup</a></li>
+            <!-- LOGIN END -->
+            {% endif %}
+        </ul>
+    </nav>
+</header>

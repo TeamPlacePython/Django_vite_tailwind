@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
@@ -30,8 +29,10 @@ INSTALLED_APPS = [
     "django_vite",
     "crispy_forms",
     "crispy_tailwind",
+    "django.contrib.sites",
     "allauth",
     "allauth.account",
+    "allauth.socialaccount",
     "django_htmx",
     # Applications projet
     "apps.home.apps.HomeConfig",
@@ -66,7 +67,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         # https://docs.djangoproject.com/fr/5.1/ref/settings/#dirs
         "DIRS": [
-            APPS_DIR / "templates",
+            BASE_DIR / "templates",
         ],
         # https://docs.djangoproject.com/fr/5.1/ref/settings/#app-dirs
         "APP_DIRS": True,
@@ -158,7 +159,7 @@ STATIC_ROOT = Path(
 )
 
 # https://docs.djangoproject.com/fr/5.1/ref/settings/#static-url
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 
 # https://docs.djangoproject.com/fr/5.1/ref/settings/#staticfiles-dirs
 STATICFILES_DIRS = [BASE_DIR / "static"]

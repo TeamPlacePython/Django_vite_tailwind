@@ -4,13 +4,13 @@
     "src": "src/css/styles.css",
     "isEntry": true
   },
-  "src/js/index.js": {
-    "file": "assets/app-BEZF7wNr.js",
-    "name": "app",
-    "src": "src/js/index.js",
+  "src/js/script.js": {
+    "file": "assets/script-BEZF7wNr.js",
+    "name": "script",
+    "src": "src/js/script.js",
     "isEntry": true,
     "css": [
-      "assets/app-BUrcyj0q.css",
+      "assets/script-BUrcyj0q.css",
       "assets/styles-ncfKWCOd.css"
     ]
   }
