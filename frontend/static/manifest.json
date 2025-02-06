@@ -1,0 +1,17 @@
+{
+  "src/css/styles.css": {
+    "file": "assets/styles-ncfKWCOd.css",
+    "src": "src/css/styles.css",
+    "isEntry": true
+  },
+  "src/js/index.js": {
+    "file": "assets/app-BEZF7wNr.js",
+    "name": "app",
+    "src": "src/js/index.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-BUrcyj0q.css",
+      "assets/styles-ncfKWCOd.css"
+    ]
+  }
+}
