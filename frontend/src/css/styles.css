@@ -1,15 +1,15 @@
 @import "tailwindcss" source("../../../");
 
 @theme {
-    --color-navbar: 'oklch(95.81% 0 0)';
-    --color-text_navbar: 'oklch(37.91% 0 0)';
-    --color-navbar_secondary: 'oklch(45% 0 0)';
-    --color-text_navbar_secondary: 'oklch(45% 0 0)';
-    --color-hover_navbar: 'oklch(83.28% 0 0)';
-    --color-defilepsie_red: 'oklch(51.98% 0.1931 23.14)';
-    --color-defilepsie_red_secondary: 'oklch(45% 0.1931 23.14)';
-    --color-defilepsie_blue: 'oklch(50.67% 0.137 248.91)';
-    --color-defilepsie_blue_secondary: 'oklch(45% 0.137 248.91)';
+    --color-navbar: #f1f1f1;
+    --color-text_navbar: #424242;
+    --color-navbar_secondary: #555555;
+    --color-text_navbar_secondary: #555555;
+    --color-hover_navbar: #c8c8c8;
+    --color-defilepsie_red: #bf1e2e;
+    --color-defilepsie_red_secondary: #a60019;
+    --color-defilepsie_blue: #0668af;
+    --color-defilepsie_blue_secondary: #00579d;
 }
 
 
