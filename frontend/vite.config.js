@@ -13,7 +13,6 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        app: "./src/js/index.js",
         styles: "./src/css/styles.css"
       }
     },

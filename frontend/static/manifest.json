@@ -3,15 +3,5 @@
     "file": "assets/styles-ncfKWCOd.css",
     "src": "src/css/styles.css",
     "isEntry": true
-  },
-  "src/js/script.js": {
-    "file": "assets/script-BEZF7wNr.js",
-    "name": "script",
-    "src": "src/js/script.js",
-    "isEntry": true,
-    "css": [
-      "assets/script-BUrcyj0q.css",
-      "assets/styles-ncfKWCOd.css"
-    ]
   }
 }

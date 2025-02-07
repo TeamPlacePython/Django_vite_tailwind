@@ -19,6 +19,8 @@ psycopg2-binary = "*"
 pytest-cov = "*"
 flake8 = "*"
 flake8-html = "*"
+django-admin-honeypot-updated-2021 = "*"
+whitenoise = "*"
 
 [dev-packages]
 django-browser-reload = "*"

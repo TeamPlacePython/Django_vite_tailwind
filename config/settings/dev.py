@@ -38,9 +38,7 @@ MIDDLEWARE += [
 ]
 
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html#internal-ips
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+INTERNAL_IPS = ["127.0.0.1", "localhost:8000"]
 
 # https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#debug-toolbar-config
 DEBUG_TOOLBAR_CONFIG = {

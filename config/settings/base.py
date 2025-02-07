@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "admin_honeypot",
     "django_htmx",
     # Applications projet
     "apps.home.apps.HomeConfig",
@@ -46,6 +47,7 @@ SITE_ID = 1
 # https://docs.djangoproject.com/fr/5.1/topics/http/middleware/
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -257,3 +259,10 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_BLACKLIST = [
+    "admin",
+    "superuser",
+    "root",
+    "webmaster",
+    "theboss",
+]
