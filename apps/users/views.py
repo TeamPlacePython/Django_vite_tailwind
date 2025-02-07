@@ -1,17 +1,14 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.views import redirect_to_login
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from django.contrib.auth.models import User
-from django.contrib.auth.views import redirect_to_login
 from django.contrib import messages
 from django.urls import reverse
 
 from allauth.account.utils import send_email_confirmation
 
-from .forms import ProfileForm
-from .forms import EmailForm
+from .forms import ProfileForm, EmailForm
 
 
 def profile_view(request, username=None):

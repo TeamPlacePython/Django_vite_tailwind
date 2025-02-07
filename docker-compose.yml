@@ -3,11 +3,11 @@ services:
     image: postgres:latest
     container_name: django_vite_tailwind_starter
     ports:
-      - "35432:5432"
+      - "65432:5432"
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres_name
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

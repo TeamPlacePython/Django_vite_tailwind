@@ -1,0 +1,36 @@
+[flake8]
+# Ignorer certaines règles spécifiques
+extend-ignore =
+    H101,
+    H202,
+    H233,
+    H301,
+    H306,
+    H401,
+    H403,
+    H404,
+    H405,
+    H501
+
+# Longueur maximale de ligne
+max-line-length = 99
+
+# Exclure certains dossiers et fichiers de l'analyse
+exclude =
+    venv,
+    .venv,
+    .git,
+    .gitignore,
+    setup.py,
+    **/migrations/*,
+    __pycache__,
+    .pytest_cache,
+    frontend,
+    **/site-packages/**,  # Exclut tous les packages installés
+    apps/home/admin.py,
+    apps/home/models.py,
+    apps/home/tests.py,
+    apps/users/apps.py,
+    apps/users/tests.py,
+    config/settings/dev.py,
+    config/settings/production.py

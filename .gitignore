@@ -6,6 +6,8 @@ dist/
 wheels/
 *.egg-info
 db.sqlite3
+.DS_Store
 
+.pytest_cache
 # Virtual environments
 .venv

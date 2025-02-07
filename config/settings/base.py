@@ -91,8 +91,19 @@ WSGI_APPLICATION = "config.wsgi.application"
 # - POSTGRESQL: postgres://USER:PASSWORD@HOST:PORT/DB_NAME (avec le driver psycopg)
 # - MYSQL: mysql://USER:PASSWORD@HOST:PORT/DB_NAME (avec le driver mysqlclient)
 # - SQLITE: sqlite:///FILE_NAME (le driver est inclus par défaut dans python)
+# DATABASES = {
+#     "default": env.db("DJANGO_DATABASE_URL", default="sqlite:///db.sqlite3")
+# }
+
 DATABASES = {
-    "default": env.db("DJANGO_DATABASE_URL", default="sqlite:///db.sqlite3")
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("POSTGRES_DB"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRES_PASSWORD"),
+        "HOST": env("POSTGRES_HOST"),
+        "PORT": env("POSTGRES_PORT"),
+    }
 }
 
 # https://docs.djangoproject.com/fr/5.1/ref/settings/#std:setting-DEFAULT_AUTO_FIELD

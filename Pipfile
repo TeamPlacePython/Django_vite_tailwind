@@ -15,9 +15,14 @@ argon2-cffi = "*"
 django-vite = "*"
 crispy-tailwind = "*"
 django-extensions = "*"
+psycopg2-binary = "*"
+pytest-cov = "*"
+flake8 = "*"
+flake8-html = "*"
 
 [dev-packages]
 django-browser-reload = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.12"
